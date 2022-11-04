@@ -5,6 +5,31 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "PlatformIO Debugger",
+            "request": "launch",
+            "type": "platformio-debug",
+            "executable": ".pio/build/myenv/firmware.elf",
+            "toolchainBinDir": "/usr/local/bin"
+        },
+        {
+            "name": "RSpec - active spec file only",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/rspec",
+            "args": [
+                "-I",
+                "${workspaceRoot}",
+                "${file}"
+            ]
+        },
+        {
+            "name": "Launch Edge",
+            "request": "launch",
+            "type": "msedge",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
             "name": "Run Windows Hermes - Experimental",
             "request": "launch",
             "type": "reactnativedirect",
